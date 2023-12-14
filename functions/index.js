@@ -45,12 +45,9 @@ app.use(express.urlencoded({ limit: "50mb", extended: true }));
 //   } catch (error) {}
 // };
 // connectDb();
-mongoose.connect(
-  "mongodb+srv://goyalharshit79:Imtheguy1@chat.67fpege.mongodb.net/?retryWrites=true&w=majority/test",
-  {
-    useNewUrlParser: true,
-  }
-);
+mongoose.connect(process.env.DB_ADRESS, {
+  useNewUrlParser: true,
+});
 
 // const server = createServer(app);
 
